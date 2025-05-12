@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de contacts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Gestion de contacts</h1>
+        <p>Ajoutez, recherchez et gérez vos contacts facilement</p>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+        <div class="form-row">
+            <input type="text" placeholder="Nom complet" id="fullName" required>
+            <input type="tel" placeholder="Téléphone" id="phone">
+            <input type="email" placeholder="Email" id="email">
+        </div>
+
+        <div class="form-row">
+            <div class="avatar-upload">
+                <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+                <label for="avatarUpload" class="avatar-upload-label">
+                    <img src="uploads/*.png" class="avatar-preview" id="avatarPreview">
+                    <span>Cliquez pour ajouter une photo</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="form-row radio-group">
+            <label class="radio-label">
+                <input type="radio" name="category" value="ami" checked> Ami
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="category" value="famille"> Famille
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="category" value="professionnel"> Professionnel
+            </label>
+        </div>
+
+        <button type="submit" class="add-btn">Ajouter</button>
+    </form>
+
+    <div class="search-box">
+        <input type="text" placeholder="Rechercher par nom..." id="searchInput">
+    </div>
+
+    <div class="contact-list" id="contactList">
+        <!-- Les contacts seront ajoutés ici dynamiquement -->
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
